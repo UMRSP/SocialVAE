@@ -1,0 +1,12 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file> -c pytorch
+# platform: linux-64
+# macOS with Apple Silicon (Requires MPS support)
+
+# General dependencies
+numpy==1.21.2
+tensorboard==2.8.0
+
+# PyTorch 2.x is required for Metal Performance Shaders (MPS) support
+torch>=2.1.0
+torchvision>=0.16.0
