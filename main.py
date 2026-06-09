@@ -27,7 +27,16 @@ if __name__ == "__main__":
     spec.loader.exec_module(config)
 
     if settings.device is None:
-        settings.device = "cuda" if torch.cuda.is_available() else "cpu"
+        if torch.cuda.is_available():
+            settings.device = "cuda"
+            print("using cuda")
+        elif torch.backends.mps.is_available():
+            settings.device = "mps"
+            print("using mps")
+        else:
+            settings.device = "cpu" 
+            print("using cpu")
+
     settings.device = torch.device(settings.device)
     
     seed(settings.seed)

@@ -1,0 +1,12 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file> -c pytorch -c nvidia -c conda-forge
+# platform: win-64
+
+# General dependencies
+numpy=1.21.2
+tensorboard=2.8.0
+
+# PyTorch 2.x and CUDA 12.1 for RTX 4000 series (Ada Lovelace architecture)
+pytorch>=2.1.0
+torchvision>=0.16.0
+pytorch-cuda=12.1
